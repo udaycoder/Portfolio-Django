@@ -1,1 +1,1 @@
-My portfolio webapp created using django framework. It has a code-compile-run sectiona and a blog section along with the main portfolio.
+My portfolio webapp created using django framework. It has a code-compile-run section and a blog section along with the main portfolio.

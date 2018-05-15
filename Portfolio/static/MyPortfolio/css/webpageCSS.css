@@ -1,0 +1,120 @@
+@media (min-width: 1186px) {
+  .container {
+    width: 95%;
+  }
+    #newham{
+      display:none;
+    }
+
+}
+
+body {
+      position: relative;
+      background: url("dark_background.jpg");
+      background-attachment: fixed;
+  }
+
+  #main-body{
+    margin-top: 5%;
+  }
+
+  #Project{
+    margin-left: 25%;
+  }
+
+  #Training{
+    margin-left: 25%;
+  }
+
+  #Competitions{
+    margin-left: 25%;
+  }
+
+  #Extra{
+    margin-left: 25%;
+  }
+
+  #Contact{
+    margin-left: 25%;
+  }
+
+  #DP{
+    width:200px;
+    height:200px;
+  }
+
+  .affix {
+    width:93%;
+      top:0;
+      z-index: 9999 !important;
+      margin-top: 6%;
+  }
+  .navbar {
+      margin-bottom: 0px;
+      margin-top:0px;
+      margin-right: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+
+  .col-md-3{
+    margin-top:2%;
+  }
+
+  .col-md-6{
+    margin-top:2%;
+  }
+
+  footer{
+    margin-top:2%;
+  }
+
+  .jumbotron{
+    background-color: #8c8c8c;
+    height:50%;
+  }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      max-height: 430px !important;
+      margin: auto;
+  }
+
+  #daily-quotes{
+    display: none;
+  }
+
+  @media screen and (max-width: 1185px) {
+    .affix{
+        position: static;
+    }
+
+    #Project{
+      margin-left: 0%;
+    }
+
+    #Training{
+      margin-left:0%;
+    }
+
+    #Competitions{
+      margin-left: 0%;
+    }
+
+    #Extra{
+      margin-left: 0%;
+    }
+
+    #Contact{
+      margin-left: 0%;
+    }
+
+    #DP{
+      width:200px;
+      height:200px;
+      margin-left:27%;
+    }
+}

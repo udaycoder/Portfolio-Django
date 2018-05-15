@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>{% block head_title %}Udayan's Blog{% endblock head_title %}</title>
+
+{% load staticfiles %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/webpagecss.css' %}">
+
+<style type="text/css">
+
+ 	{% block style %} {% endblock style %}
+
+</style>
+
+<script src="{% static 'blog/js/webpagejs.js' %}"></script>
+
+</head>
+
+<body>
+<div class="container" id="home">
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="page-header" id="Title" style="border:2px solid black;">
+       <center><p><span style="font: italic bold 40px Book Antiqua, serif;color:black">Udayan's Blog</span><br><span style="font-size:20px;color:black;">The story of an inquisitive Engineer</span></p></center>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin:24px 0;">
+  <a class="navbar-brand" href="{% url 'blog:bloghome' %}">Blog</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navb">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'mainapp:index'%}">Portfolio</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'blog:bloghome' %}">
+      <input class="form-control mr-sm-2" name="blogsearch" type="text" placeholder="Search Posts">
+      <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<br>
+
+{% if messages %}
+
+<div class="messages">
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+</div>
+
+{% endif %}
+
+<div class="container">
+{% block content %}
+
+
+
+{% endblock content %}
+</div>
+
+</div>
+
+</body>
+
+</html>

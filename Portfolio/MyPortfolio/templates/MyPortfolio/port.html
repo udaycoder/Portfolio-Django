@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>UdayanBaidya</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Udayan Baidya">
+  <meta name="keywords"  content="portfolio,computer science engineer,software developer">
+  <meta description="description" content="Personal Portfolio website">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+   {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'MyPortfolio/css/webpageCSS.css' %}">
+  <script src="{% static 'MyPortfolio/js/webpageJS.js' %}"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87196177-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="https://use.fontawesome.com/218b0abe62.js"></script>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+
+<div class="container" id="home">
+
+  <div class="page-header" id="Title">
+       <center><p><span style="font: italic bold 40px Book Antiqua, serif;color:white;">Udayan Baidya</span><br><span style="font-size:20px;color:white;">Engineer by choice</span></p></center>
+  </div>
+
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+
+  <div class="carousel-inner" role="listbox" >
+
+    <div class="item active">
+      <img src="{% static 'MyPortfolio/css/1.jpg' %}" alt="ACM_ICPC">
+    </div>
+
+    <div class="item">
+      <img src="{% static 'MyPortfolio/css/2.jpg' %}" alt="Coding">
+    </div>
+
+    <div class="item">
+      <img src="{% static 'MyPortfolio/css/3.jpg' %}" alt="Family">
+    </div>
+
+  </div>
+
+
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+  <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="590" >
+        <a class="navbar-brand" id="myhome" href="#home"> <span class="glyphicon glyphicon-home"></span>Home</a>
+      <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navb" id="newham">
+    <span class="glyphicon glyphicon-menu-hamburger " ></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navb">
+      <ul class="nav navbar-nav">
+    <li><a id="myabout" href="#About">About Me</a></li>
+  <li><a id="myproject" href="#Project">Projects</a></li>
+    <li><a id="mytraining" href="#Training">Trainings and Certifications</a></li>
+    <li><a id="mycompetitions" href="#Competitions">Competitions</a></li>
+    <li><a id="myextra" href="#Extra">Extracurricular Activities</a></li>
+    <li><a id="mycontact" href="#Contact">Contact <span class="glyphicon glyphicon-envelope"></span></a></li>
+    <li style="background-color:#e60000;" ><a style="color:white;" href="{% static 'MyPortfolio/Resume/Udayan_Baidya_Resume.pdf' %}" target="_blank">Resume <span class="glyphicon glyphicon-download"></span></a></li>
+    <li style="background-color:#00802b;"><a id="myCode" href="#CodeNow" style="color:white;"><i class="fa fa-free-code-camp" aria-hidden="true"></i> Code!Compile!Run! <i class="fa fa-code" aria-hidden="true"></i></a></li>
+    <li style="background-color:#003380;"><a id="myBlog" href="{% url 'blog:bloghome' %}" style="color:white;"><i class="fa fa-pencil-square-o " aria-hidden="true"></i> My Blog <i class="fa fa-code" aria-hidden="true"></i></a></li>
+  </ul>
+</div>
+  </nav>
+
+
+  <div id="main-body">
+  <div class="row">
+    <div class="col-lg-3" id="picdiv">
+
+      <p><img src="{% static 'MyPortfolio/css/Udayan Pic.jpg' %}" class="img-responsive img-thumbnail" id="DP"></p>
+
+    </div>
+
+
+
+    <div class="col-lg-6" id="About">
+    <div class="panel panel-default">
+    <div class="panel-heading">About Me</div>
+    <div class="panel-body"><p>I am a Computer Science and Engineering undergrad from NIT Agartala.<br> Coding is my passion and i like to make an impact through my code.<br>
+    I like to participate in engineering challenges wherever i get them .<br> I am also a very good team player and can work with a team to accomplish a certain task.<br>
+    I like solving problems especially in the software developement realm and coming up with interesting solutions . I am passionate about learning new algorithms as well
+    learning about new programming languages and open source projects.<br> I am a supporter and contributer to FOSS and would like to use my interest in software to make an impact on
+    other peoples lives.
+  </p></div>
+</div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="col-lg-6" id="Project" >
+    <div class="panel panel-default">
+    <div class="panel-heading" >Projects</div>
+    <div class="panel-body">
+              <ul>
+
+                <li>Reliance Industries Limited Winter Internship-<br>Created a portal in R and Shiny to deploy Analytics data through interactive graphs and images </li>
+                <br>
+                 <li>Completed Summer Training at National Informatics Center, Agartala on web development.
+                   Created software user manual for Tripura tourism accommodation booking website and created a student
+                   portal to manage students being allotted to different sections and view relevant student data from the database.<br>
+                 Github link- <a  href="https://github.com/udaycoder/NIC-project" target="_blank">NIC-Project</a></li>
+                 <br>
+                 <li> Created an remotely operated boat which serves as a platform to be used with various sensors to get various data from water bodies as per requirement.
+                    Controller used is arduino leonardo for this project. Under prof Suman Deb, Assistant Professor, Dept. of Computer Science and Engineering, N.I.T. Agartala.
+                Github link- <a  href="https://github.com/udaycoder/Research_Craft" target="_blank">Research_Craft</a>
+              </li>
+              <br>
+              <li>Created a personal portfolio website from scratch.Technologies used were bootstrap,jquery,django and hackerearth api for creating a code compile and run system.<br>
+                  Github link- <a href="https://github.com/udaycoder/personalWebsite" target="_blank">Personal-Website</a>
+              </li>
+              <br>
+              <li>Created an obstacle avoidance robot using Arduino UNO microcontroller and HC-SR04 ultrasonic sensor.Logic was coded using Arduino IDE.
+                 Github link- <a href="https://github.com/udaycoder/Obstacle_Avoidance_Robot" target="_blank">Obstacle_Avoidance_Robot</a>
+                </li>
+              </ul>
+                <br>
+    </div>
+</div>
+  </div>
+
+ <div id="daily-quotes" class="col-lg-3">
+    <div>
+    <div class="panel panel-default">
+    <div class="panel-heading">Inspirational Quotes</div>
+       <div class="panel-body">
+
+         <p style="font-size:20px;">&#34; Arise,awake,and stop not till the goal is reached. &#34; <br>
+                - Swami Vivekananda</p>
+
+       </div>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<div class="row">
+  <div class="col-lg-6" id="Training" >
+    <div class="panel panel-default">
+    <div class="panel-heading" >Trainings and Certifications</div>
+    <div class="panel-body">
+      <ul>
+        <li>Excellent grade achieved in C programming language training from NIIT.</li><br>
+        <li>Attended workshop on Human Computer Interaction,2015 and 2016 organised by N.I.T Agartala which hosted eminent speakers
+          from premier institutes from both industry(NUGENIX robotics) as well as academia(IIT,IIEST,NIT).</li><br>
+          <li>Attended National Workshop on Android Development 2016 organised by NIT Agartala 2016,
+            which provided a crash course on Android development and inside view on many Government sponsored apps.</li>
+      </ul>
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6" id="Competitions" >
+    <div class="panel panel-default">
+    <div class="panel-heading" >Competititons</div>
+    <div class="panel-body">
+      <ul>
+        <li>Stood first in college for ACM ICPC 2016-17 Online round and attended ACM ICPC Coimbatore Regionals</li><br>
+      </ul>
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6" id="Extra" >
+    <div class="panel panel-default">
+    <div class="panel-heading" >Extracurricular Activities</div>
+    <div class="panel-body">
+      <ul>
+        <li>Part of the Core Technical team that organized Advaitam 2017, the biggest Techno-Cultural Fest in the
+   North-East.Part of the team that developed the website for Advaitam 2017</li><br>
+   <li>Part of the Core Technical team that organized QUIZASTER-1,a state level quiz competition organized by
+Holy Cross School,Agartala .</li><br>
+<li>
+Completed SKAN101x:Basic 3d animation using Blender course by IITBombayX and received 98% final
+score. Aim is to use animation to make interactive education courses for students  and for 3d modeling bots.
+Certificate Validation- <a href="https://verify.iitbombayx.in/cert/77bbc22b8a4444409284ab64171024c8" target="_blank">Validate Certificate</a> </li> <br>
+      </ul>
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6" id="Contact"> >
+    <div class="panel panel-default">
+    <div class="panel-heading">Contact Info</div>
+    <div class="panel-body">
+       <div class="btn-group btn-group-justified">
+         <a href="mailto:udayanbaidya@gmail.com" target="_blank" class="btn btn-primary">Send Email</a>
+         <a href="https://github.com/udaycoder" target="_blank" class="btn btn-primary">GitHub</a>
+         <a href="https://in.linkedin.com/in/udayan-baidya-1a6a72101" target="_blank" class="btn btn-primary">LinkedIn</a>
+         <a href="https://www.facebook.com/jalashwa" target="_blank" class="btn btn-primary">Facebook</a>
+         <a href="https://www.quora.com/profile/Udayan-Baidya" target="_blank" class="btn btn-primary">Quora</a>
+       </div>
+       <br>
+       <p>Email address- udayanbaidya@gmail.com</p>
+    </div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+<br><br>
+<footer id="footer" class="jumbotron">
+  <center><p>	&copy;2016, Udayan Baidya</p></center>
+</footer>
+</html>
